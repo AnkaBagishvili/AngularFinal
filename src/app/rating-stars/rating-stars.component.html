@@ -1,0 +1,12 @@
+@for (star of starList; track $index) {
+<i
+  class="bi bi-star"
+  [ngClass]="{
+    'bi-star-fill': $index + 1 <= rating,
+    'bi-star-half': $index + 1 > rating && $index < rating,
+    'bi-star': $index + 1 > rating && $index >= rating
+  }"
+></i>
+
+}
+<br />

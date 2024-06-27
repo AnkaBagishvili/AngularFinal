@@ -1,0 +1,19 @@
+<button mat-button [matMenuTriggerFor]="aboveMenu">ჩემი ველი</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <div class="nav_top">
+    <p>Hello, {{ userName }}. How can I help you?</p>
+    <button mat-menu-item>
+      <i class="fa-regular fa-envelope"></i>მოგვწერე
+    </button>
+  </div>
+  <button mat-menu-item><i class="fa-regular fa-heart"></i> სურვილები</button>
+  <button mat-menu-item>
+    <i class="fa-solid fa-location-dot"></i>მისამართები
+  </button>
+  <button mat-menu-item>
+    <i class="fa-regular fa-credit-card"></i>ბარათები
+  </button>
+  <button mat-menu-item>
+    <i class="fa-solid fa-arrow-right-from-bracket"></i> გამოსვლა
+  </button>
+</mat-menu>
