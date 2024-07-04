@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card">
+    <!-- <div class="stock" *ngIf="product.stock < 50 ">{{"Few items left"}}</div> -->
+    <a href="/" class="image-container">
+      <img class="image" [src]="product.image" [alt]="'product' + product.id" />
+    </a>
+    <div class="main-content">
+      <h1>{{ product.title }}</h1>
+      <div class="d-flex justify-content-evenly">
+        <span class="price">{{ product.price | currency }}</span>
+        <span class="discount">{{ product.discount }}</span>
+      </div>
+      <span class="category">{{ product.category }}</span>
+      <p>{{ product.description | truncate : 10 }}</p>
+      <div class="flex-row">
+        <div class="rating">
+          <span>
+            {{ product.rating }} <app-rating-stars [rating]="product.rating" />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button (click)="buttonClick.emit()">Delete Item</button>

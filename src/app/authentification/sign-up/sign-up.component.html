@@ -1,0 +1,84 @@
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <h3>Create Account</h3>
+
+  <div>
+    <label for="username">Username</label>
+    <input id="username" formControlName="username" />
+    <div
+      *ngIf="
+        signUpForm.get('username')!.invalid &&
+        (signUpForm.get('username')!.touched ||
+          signUpForm.get('username')!.dirty)
+      "
+    >
+      <small *ngIf="signUpForm.get('username')!.errors?.['required']"
+        >Username is required.</small
+      >
+      <small *ngIf="signUpForm.get('username')!.errors?.['minlength']"
+        >Username must be at least 4 characters long.</small
+      >
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input id="email" formControlName="email" />
+    <div
+      *ngIf="
+        signUpForm.get('email')!.invalid &&
+        (signUpForm.get('email')!.touched || signUpForm.get('email')!.dirty)
+      "
+    >
+      <small *ngIf="signUpForm.get('email')!.errors?.['required']"
+        >Email is required.</small
+      >
+      <small *ngIf="signUpForm.get('email')!.errors?.['email']"
+        >Enter a valid email.</small
+      >
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input id="password" type="password" formControlName="password" />
+    <div
+      *ngIf="
+        signUpForm.get('password')!.invalid &&
+        (signUpForm.get('password')!.touched ||
+          signUpForm.get('password')!.dirty)
+      "
+    >
+      <small *ngIf="signUpForm.get('password')!.errors?.['required']"
+        >Password is required.</small
+      >
+      <small *ngIf="signUpForm.get('password')!.errors?.['minlength']"
+        >Password must be at least 6 characters long.</small
+      >
+    </div>
+  </div>
+
+  <div>
+    <label for="confirmPassword">Confirm Password</label>
+    <input
+      id="confirmPassword"
+      type="password"
+      formControlName="confirmPassword"
+    />
+    <div
+      *ngIf="
+        signUpForm.get('confirmPassword')!.invalid &&
+        (signUpForm.get('confirmPassword')!.touched ||
+          signUpForm.get('confirmPassword')!.dirty)
+      "
+    >
+      <small *ngIf="signUpForm.get('confirmPassword')!.errors?.['required']"
+        >Confirmation is required.</small
+      >
+      <small *ngIf="signUpForm.hasError('mismatch')"
+        >Passwords must match.</small
+      >
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+</form>

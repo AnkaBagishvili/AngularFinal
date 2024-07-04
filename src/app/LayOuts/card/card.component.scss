@@ -1,0 +1,47 @@
+// .container {
+//   display: flex;
+//   height: 100%; // Ensure the container takes the full height of the parent
+// }
+
+.card {
+  width: calc(33.333% - 1rem);
+  background-color: var(--var-card-dark);
+  border-radius: 15px;
+  padding: 1rem;
+  box-sizing: border-box;
+  // justify-content: space-between; // Ensure content is evenly distributed
+  // flex: 1; // Allow the card to grow within its container
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+h1 {
+  margin: 15px 0;
+  font: var(--var-heading);
+  color: var(--var-lightest);
+}
+
+span {
+  font: var(--var-small-heading);
+  color: var(--var-lightest);
+}
+
+p {
+  font: var(--var-para);
+  color: var(--var-soft-blue);
+}
+
+// @media (min-width: 400px) {
+//   img.eye {
+//     max-width: 3em;
+//   }
+// }
+
+// @media (min-width: 600px) {
+//   body {
+//     font-size: 18px;
+//   }
+// }
