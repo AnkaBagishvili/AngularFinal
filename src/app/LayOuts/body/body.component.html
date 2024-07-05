@@ -3,21 +3,24 @@
     {{ openForm ? "Cancel" : "Add Item" }}
   </button>
 </div> ეს მინდა იუზერის გვერდზე -->
-<img
-  class="banner"
-  src="https://media.veli.store/media/bodybuilder/banners/hm1meini_qar.webp"
-/>
+<hr />
+<div class="image-container">
+  <img
+    class="banner"
+    src="https://media.veli.store/media/bodybuilder/banners/hm1meini_qar.webp"
+  />
+</div>
 <div class="container">
   <!-- @if (openForm) {
 <app-add-product />
 } ესეც იუზერში-->
   <div class="cards_container">
     @for (product of productList; track product.id) {
-    <!-- <app-card
+    <app-card
       [product]="product"
       class="product"
       (buttonClick)="deleteItem(product.id)"
-    /> -->
+    />
     }
   </div>
 </div>

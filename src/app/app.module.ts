@@ -9,9 +9,11 @@ import { SignUpComponent } from './authentification/sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './helpers/services/auth.service';
 import { AuthGuard } from './helpers/services/guards.guard';
+import { PageNotFoundComponent } from './LayOuts/page-not-found/page-not-found.component';
+import { SingInComponent } from './authentification/sing-in/sing-in.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PageNotFoundComponent],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],
   imports: [
@@ -21,6 +23,7 @@ import { AuthGuard } from './helpers/services/guards.guard';
     ReactiveFormsModule,
     StoreModule.forRoot({}, {}),
     SignUpComponent,
+    SingInComponent,
   ],
 })
 export class AppModule {}

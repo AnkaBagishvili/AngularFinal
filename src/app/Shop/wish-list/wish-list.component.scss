@@ -1,0 +1,50 @@
+.column-labels {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.product-image img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #333;
+}
+
+.product-removal {
+  text-align: center;
+}
+
+.remove-product {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}

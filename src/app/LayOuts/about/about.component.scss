@@ -1,4 +1,56 @@
+$primary-color: #000000;
+$background-color: #eff5ef;
+$text-color: #333;
+$card-border-color: #ddd;
+$card-background-color: #fff;
+$card-hover-color: #f1f1f1;
+$max-width: 1200px;
+$padding: 20px;
+$gap: 20px;
+$transition-duration: 0.3s;
+$border-radius: 10px;
+$iframe-width: 100%;
+$iframe-max-width: 560px;
+$iframe-height: auto;
+$paragraph-font-size: 16px;
+$paragraph-line-height: 1.5;
+$margin-bottom: 20px;
+$container-padding: 20px;
+
 .container {
-  display: flex;
-  justify-content: space-between;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $container-padding;
+
+  iframe {
+    width: $iframe-width;
+    max-width: $iframe-max-width;
+    height: $iframe-height;
+    border: none;
+    margin-bottom: $margin-bottom;
+    border-radius: $border-radius;
+  }
+
+  p {
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    color: $text-color;
+    margin-bottom: $margin-bottom;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }

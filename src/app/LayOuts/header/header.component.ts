@@ -1,6 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { debounceTime, filter, fromEvent, map, switchMap } from 'rxjs';
+import { Component } from '@angular/core';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 @Component({
@@ -24,17 +22,5 @@ export class HeaderComponent {
     //   .subscribe((result) => {
     //     this.productList = result;
     //   });
-  }
-  searchInput = new FormControl('');
-  @ViewChild('search') search!: ElementRef<HTMLInputElement>;
-
-  ngAfterViewInit(): void {
-    fromEvent(this.search.nativeElement, 'keyup').pipe(
-      debounceTime(1000),
-      map((event) => (event.target as HTMLInputElement).value),
-      filter((value) => value.length > 2)
-      // switchMap((key) => this._productService.searchProduct(key as string))
-    );
-    // .subscribe((result) => (this.productList = result));
   }
 }

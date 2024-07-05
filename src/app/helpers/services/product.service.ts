@@ -236,6 +236,10 @@ export class ProductService {
 
   constructor() {}
 
+  // searchProduct(query: string): Observable<any[]> {
+  //   return this.http.get<any[]>(`${this.apiUrl}?search=${query}`);
+  // }
+
   addProduct(item: {
     title: string;
     price: number;

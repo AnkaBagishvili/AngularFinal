@@ -1,0 +1,92 @@
+$primary-color: #000000;
+$background-color: #eff5ef;
+$text-color: #333;
+$secondary-text-color: #666;
+$max-width: 1200px;
+$padding: 40px 0;
+$font-size-base: 14px;
+$font-size-heading: 18px;
+$icon-size: 18px;
+$border-color: #ddd;
+
+footer {
+  background-color: $background-color;
+  padding: $padding;
+  font-family: Arial, sans-serif;
+  color: $text-color;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .col-md-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: $font-size-heading;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        font-size: $icon-size;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &.marg {
+      margin-top: 10px;
+    }
+
+    i {
+      margin-right: 10px;
+      font-size: $icon-size;
+    }
+  }
+
+  hr {
+    border-top: 1px solid $border-color;
+    margin: 20px 0;
+  }
+
+  p {
+    font-size: $font-size-base;
+    color: $secondary-text-color;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}

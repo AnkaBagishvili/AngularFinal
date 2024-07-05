@@ -1,14 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignUpComponent } from './authentification/sign-up/sign-up.component';
 import { AuthGuard } from './helpers/services/guards.guard';
+import { PageNotFoundComponent } from './LayOuts/page-not-found/page-not-found.component';
+import { SingInComponent } from './authentification/sing-in/sing-in.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'SignIn',
+  //   pathMatch: 'full',
+  // },
   {
-    path: '',
-    component: SignUpComponent,
+    path: 'SignUp',
+    component: SingInComponent,
     canActivate: [AuthGuard],
-    pathMatch: 'full',
+  },
+  {
+    path: 'main',
+    loadChildren: () =>
+      import('./home/home-page.module').then((module) => module.HomePageModule),
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 
