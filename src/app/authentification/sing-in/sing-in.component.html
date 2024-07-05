@@ -1,11 +1,17 @@
 <div class="container">
-  <form [formGroup]="authForm" (submit)="onSignIn()">
+  <form [formGroup]="authForm" (ngSubmit)="onSignIn()">
     <div class="screen-1">
       <div class="email">
         <label for="email">Email Address</label>
         <div class="sec-2">
           <i class="bi bi-envelope"></i>
-          <input type="email" name="email" id="email" formControlName="email" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="email"
+            formControlName="email"
+          />
         </div>
       </div>
 
@@ -16,6 +22,7 @@
           <input
             type="password"
             name="password"
+            placeholder="Password"
             id="password"
             formControlName="password"
             class="pas"
@@ -34,7 +41,7 @@
         <label for="" class="form-check-label ms-2">Remember me</label>
       </div>
 
-      <button class="login" type="submit">Login</button>
+      <button class="login" type="submit">Sign In</button>
 
       <div class="footer">
         <span>Sign up</span>

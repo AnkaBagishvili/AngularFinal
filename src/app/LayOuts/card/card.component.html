@@ -17,7 +17,7 @@
         </span>
         <button class="wishlist-button" (click)="addToWishlist(product.id)">
           <i
-            class="fa-heart"
+            class="fa-regular fa-heart"
             [ngClass]="{
               'fa-solid': isInWishlist(product.id),
               'fa-regular': !isInWishlist(product.id)

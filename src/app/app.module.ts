@@ -8,13 +8,13 @@ import { StoreModule } from '@ngrx/store';
 import { SignUpComponent } from './authentification/sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './helpers/services/auth.service';
-import { AuthGuard } from './helpers/services/guards.guard';
+// import { AuthGuard } from './helpers/services/guards.guard';
 import { PageNotFoundComponent } from './LayOuts/page-not-found/page-not-found.component';
 import { SingInComponent } from './authentification/sing-in/sing-in.component';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
