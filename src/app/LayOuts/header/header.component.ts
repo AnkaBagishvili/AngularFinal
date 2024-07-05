@@ -9,7 +9,6 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
   imports: [HeaderMenuComponent],
 })
 export class HeaderComponent {
-  // productList: Product[] = [];
   openForm: boolean = false;
   constructor() {
     // private _cartService: CartService // private _notification: NotificationService, // public _productService: ProductService, // private _paginatorService: PaginationService,
