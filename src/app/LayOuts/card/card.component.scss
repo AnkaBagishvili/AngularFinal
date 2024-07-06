@@ -15,7 +15,10 @@ $transition-duration: 0.3s;
   margin: 0 auto;
   padding: 0 15px;
 }
-
+.image {
+  width: 100px;
+  height: 100px;
+}
 .cards_container {
   display: flex;
   flex-wrap: wrap;

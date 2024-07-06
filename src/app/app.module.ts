@@ -3,25 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeaderComponent } from './LayOuts/header/header.component';
-import { StoreModule } from '@ngrx/store';
 import { SignUpComponent } from './authentification/sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './helpers/services/auth.service';
-// import { AuthGuard } from './helpers/services/guards.guard';
 import { PageNotFoundComponent } from './LayOuts/page-not-found/page-not-found.component';
 import { SingInComponent } from './authentification/sing-in/sing-in.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
   providers: [AuthService],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HeaderComponent,
     ReactiveFormsModule,
-    StoreModule.forRoot({}, {}),
     SignUpComponent,
     SingInComponent,
   ],

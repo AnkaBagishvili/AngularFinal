@@ -21,7 +21,7 @@ export class CardComponent {
   productList: any;
   trackByProductId!: TrackByFunction<any>;
   wishlistService: any;
-  wishlistItems: any;
+  wishlistItems: any[] = [];
 
   addToWishlist(productId: number): void {
     if (this.isInWishlist(productId)) {

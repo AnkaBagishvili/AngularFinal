@@ -11,11 +11,12 @@ import { UserInfoService } from '../../../helpers/services/user-info.service';
   imports: [MatMenuModule, MatButtonModule],
 })
 export class HeaderMenuComponent implements OnInit {
-  userName!: string;
+  logout() {
+    throw new Error('Method not implemented.');
+  }
+  userName: string = '';
 
-  constructor(
-    @Inject(UserInfoService) private userInfoService: UserInfoService
-  ) {}
+  constructor(private userInfoService: UserInfoService) {}
 
   ngOnInit(): void {
     this.userInfoService.getUserName().subscribe((name: string) => {
