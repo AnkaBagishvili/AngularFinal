@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from '../../helpers/services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
@@ -10,11 +10,12 @@ import {
 } from '@angular/forms';
 import { Auth } from '../../helpers/inferfaces/auth.interface';
 import { HttpErrorResponse } from '@angular/common/http';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-sing-in',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,RouterLink],
   templateUrl: './sing-in.component.html',
   styleUrls: ['./sing-in.component.scss'],
 })
