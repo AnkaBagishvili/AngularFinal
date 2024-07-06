@@ -54,7 +54,10 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-
+a{
+  text-decoration: underline;
+  cursor: pointer;
+}
 button:hover {
   background-color: #0056b3;
 }
@@ -63,3 +66,4 @@ button:disabled {
   background-color: #b0bec5;
   cursor: not-allowed;
 }
+

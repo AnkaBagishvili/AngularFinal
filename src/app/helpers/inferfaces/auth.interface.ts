@@ -1,5 +1,5 @@
 export interface Auth {
   email: string;
   password: string;
-  rememberUser?: boolean;
+  rememberUser: boolean;
 }
