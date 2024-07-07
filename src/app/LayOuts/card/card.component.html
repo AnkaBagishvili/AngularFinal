@@ -3,7 +3,7 @@
     <img class="image" [src]="product.image" [alt]="'product' + product.id" />
 
     <div class="mainContent">
-      <h1>{{ product.title }}</h1>
+      <h1>{{ product.title | truncate : 20 }}</h1>
       <div class="">
         <span class="price">{{ product.price | currency }}</span>
         <span class="discount">{{ product.discount }}</span>
@@ -15,7 +15,7 @@
           {{ product.rating }}
           <app-rating-stars [rating]="product.rating"></app-rating-stars>
         </span>
-        <button class="wishlist-button" (click)="addToWishlist(product.id)">
+        <button class="wishlistButton" (click)="addToWishlist(product.id)">
           <i
             class="fa-regular fa-heart"
             [ngClass]="{

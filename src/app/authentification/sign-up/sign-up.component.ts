@@ -11,9 +11,9 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule,RouterLink,],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.scss',
+  styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent {
   signUpForm: FormGroup;
@@ -26,12 +26,12 @@ export class SignUpComponent {
         password: ['', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
       },
-      { validator: this.passwordMatchValidator }
+      { validators: this.passwordMatchValidator }
     );
   }
 
   passwordMatchValidator(form: FormGroup) {
-    return form.get('password')!.value === form.get('confirmPassword')!.value
+    return form.get('password')?.value === form.get('confirmPassword')?.value
       ? null
       : { mismatch: true };
   }
@@ -39,13 +39,13 @@ export class SignUpComponent {
   onSubmit() {
     if (this.signUpForm.valid) {
       const userInfo = this.signUpForm.value;
-
-      localStorage.setItem('userInfo', JSON.stringify(userInfo));
+      try {
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+      } catch (error) {
+        console.error('Error saving userInfo to localStorage:', error);
+      }
     } else {
       console.log('Form is invalid');
     }
-  }
-  catch(error: Error) {
-    console.error('Error saving userInfo to localStorage:', error);
   }
 }

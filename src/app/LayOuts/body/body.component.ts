@@ -14,7 +14,6 @@ export class BodyComponent {
     this.productList = this._productService.getProducts();
   }
   add() {}
-
   deleteItem(id: number) {
     setTimeout(() => {
       this._productService.deleteItemById(id);

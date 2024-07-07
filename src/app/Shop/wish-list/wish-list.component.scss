@@ -1,8 +1,15 @@
+.wishlist {
+  margin: 20px;
+  padding: 5px;
+  border: 3px solid #eff5ef;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // box-shadow: #f8f9fa;
+}
 .column-labels {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 1fr;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .product {

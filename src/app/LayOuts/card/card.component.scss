@@ -15,10 +15,12 @@ $transition-duration: 0.3s;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .image {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
+
 .cards_container {
   display: flex;
   flex-wrap: wrap;
@@ -55,6 +57,7 @@ $transition-duration: 0.3s;
     @media (max-width: 768px) {
       width: calc(100% - #{$gap});
     }
+
     .image {
       width: 100%;
       height: auto;
@@ -117,5 +120,26 @@ $transition-duration: 0.3s;
         }
       }
     }
+  }
+}
+.wishlistButton {
+  font-size: 0.875rem;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  color: rgb(183, 219, 156);
+  font-weight: bold;
+  padding: 5px;
+
+  .fa-heart {
+    margin-right: 5px;
+    color: red;
+  }
+
+  &:hover {
+    color: darkred;
   }
 }

@@ -1,19 +1,17 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, inject } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { UserInfoService } from '../../../helpers/services/user-info.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header-menu',
   templateUrl: './header-menu.component.html',
   styleUrls: ['./header-menu.component.scss'],
   standalone: true,
-  imports: [MatMenuModule, MatButtonModule],
+  imports: [MatMenuModule, MatButtonModule, RouterLink],
 })
 export class HeaderMenuComponent implements OnInit {
-  logout() {
-    throw new Error('Method not implemented.');
-  }
   userName: string = '';
 
   constructor(private userInfoService: UserInfoService) {}
@@ -23,4 +21,11 @@ export class HeaderMenuComponent implements OnInit {
       this.userName = name;
     });
   }
+
+  logout() {}
+
+  // private _router = inject(Router);
+  // goToWishList() {
+  //   this._router.navigate(['shop/wishlist']);
+  // }
 }

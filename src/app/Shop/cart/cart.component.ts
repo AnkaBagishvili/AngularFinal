@@ -14,7 +14,7 @@ export class CartComponent {
   cartItems: any[] = [];
   subtotal: number = 0;
   tax: number = 0;
-  shipping: number = 15; // Default shipping cost
+  shipping: number = 15;
   grandTotal: number = 0;
 
   constructor(private cartService: CartService) {}
@@ -48,7 +48,7 @@ export class CartComponent {
       (total, item) => total + item.price * item.quantity,
       0
     );
-    this.tax = this.subtotal * 0.05; // Assuming 5% tax rate
+    this.tax = this.subtotal * 0.05;
     this.grandTotal = this.subtotal + this.tax + this.shipping;
   }
 }

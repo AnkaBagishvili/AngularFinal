@@ -6,13 +6,11 @@
   />
 </div>
 <div class="container">
+  <h3 class="bodyHeader">All Products</h3>
   <div class="cards_container">
     @for (product of productList; track product.id) {
-    <app-card
-      [product]="product"
-      class="product"
-      (buttonClick)="deleteItem(product.id)"
-    />
+    <app-card [product]="product" class="product" />
     }
   </div>
 </div>
+<!-- (buttonClick)="deleteItem(product.id)" -->

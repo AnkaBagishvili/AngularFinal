@@ -3,11 +3,16 @@
   <div class="nav_top">
     <p>Hello, {{ userName }}. How can I help you?</p>
   </div>
-  <button mat-menu-item><i class="fa-regular fa-heart"></i> სურვილები</button>
+  <button mat-menu-item routerLink="/shop/wishlist">
+    <i class="fa-regular fa-heart mg"></i> სურვილები
+  </button>
   <button mat-menu-item>
-    <i class="fa-regular fa-credit-card"></i>ბარათები
+    <i class="fa-regular fa-credit-card mg"></i>ბარათები
   </button>
   <button mat-menu-item (click)="logout()">
-    <i class="fa-solid fa-arrow-right-from-bracket"></i> გამოსვლა
+    <i class="fa-solid fa-arrow-right-from-bracket mg"></i> გამოსვლა
   </button>
 </mat-menu>
+
+<!-- routerLink="/shop/wishlist" -->
+<!-- (click)="goToWishList()" -->

@@ -9,9 +9,17 @@ import { AuthService } from './helpers/services/auth.service';
 import { PageNotFoundComponent } from './LayOuts/page-not-found/page-not-found.component';
 import { SingInComponent } from './authentification/sing-in/sing-in.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+// import { BASE_URL } from './helpers/consts/consts';
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
-  providers: [AuthService],
+  providers: [
+    // {
+    //   provide: BASE_URL,
+    //   useValue: 'https://fakestoreapi.com/products',
+    // },
+    AuthService,
+  ],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -20,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     SignUpComponent,
     SingInComponent,
+    HttpClientModule,
   ],
 })
 export class AppModule {}

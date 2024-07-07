@@ -6,7 +6,6 @@
     <label class="product-details">Product</label>
     <label class="product-price">Price</label>
     <label class="product-quantity">Quantity</label>
-    <label class="product-removal">Remove</label>
     <label class="product-line-price">Total</label>
   </div>
 
@@ -29,7 +28,7 @@
     </div>
     <div class="product-removal">
       <button class="remove-product" (click)="removeProduct(item.id)">
-        Remove
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
     <div class="product-line-price">{{ item.totalPrice | currency }}</div>

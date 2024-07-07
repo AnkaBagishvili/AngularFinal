@@ -2,7 +2,7 @@ $primary-color: #007bff;
 $background-color: #f8f9fa;
 $text-color: #333;
 $border-color: #ddd;
-$button-bg-color: #28a745;
+$button-bg-color: #b4d984;
 $button-text-color: #fff;
 $button-hover-bg-color: #218838;
 $padding: 15px;
@@ -12,7 +12,7 @@ $font-family: "Arial", sans-serif;
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
   font-size: 24px;
   color: $text-color;
   font-family: $font-family;
@@ -23,6 +23,10 @@ h1 {
   padding: $padding;
   border-radius: $border-radius;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 5px;
+  border: 3px solid #eff5ef;
+  border-radius: 5px;
 
   .column-labels {
     display: grid;
